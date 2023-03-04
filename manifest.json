@@ -1,0 +1,81 @@
+{
+    "short_name": "DogeCoin",
+    "name": "DogeCoinJS Web Aplication",
+    "start_url": "index.html",
+    "background_color": "#f9d627",
+    "scope": "/",
+    "theme_color": "#f9d627",
+    "description": "Imagen de Doge <3",
+    "lang":"es-Mx",
+    "icons": [          
+          {
+            "src": "./img/Square44x44Logo.targetsize-32.png",
+            "sizes": "32x32"
+          },
+          {
+            "src": "./img/Square44x44Logo.targetsize-48.png",
+            "sizes": "48x48"
+          },
+          {
+            "src": "./img/Square44x44Logo.targetsize-64.png",
+            "sizes": "64x64"
+          },
+          {
+            "src": "./img/Square44x44Logo.targetsize-72.png",
+            "sizes": "72x72"
+          },
+          {
+            "src": "./img/Square44x44Logo.targetsize-96.png",
+            "sizes": "96x96"
+          },
+          {
+            "src": "./img/Square44x44Logo.targetsize-256.png",
+            "sizes": "256x256"
+          },
+          {
+            "src": "./img/android-launchericon-512-512.png",
+            "sizes": "512x512"
+          },
+          {
+            "src": "./img/android-launchericon-192-192.png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "./img/android-launchericon-144-144.png",
+            "sizes": "144x144"
+          },
+          {
+            "src": "./img/android-launchericon-96-96.png",
+            "sizes": "96x96"
+          },
+          {
+            "src": "./img/android-launchericon-72-72.png",
+            "sizes": "72x72"
+          },
+          {
+            "src": "./img/android-launchericon-48-48.png",
+            "sizes": "48x48"
+          },          
+          {
+            "src": "./img/40.png",
+            "sizes": "40x40"
+          },          
+          {
+            "src": "./img/80.png",
+            "sizes": "80x80"
+          },
+          {
+            "src": "./img/256.png",
+            "sizes": "256x256"
+          },
+          {
+            "src": "./img/512.png",
+            "sizes": "512x512"
+          },
+          {
+            "src": "./img/1024.png",
+            "sizes": "1024x1024"
+          }
+    ]
+    
+}
