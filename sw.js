@@ -24,19 +24,15 @@ var urlsToCache = [
     "./img/1024.png",
 ];
 
-self.addEventListener('install', e => {
-
-  e.waitUntil(
-      caches.open(CACHE_NAME)
-      .then(cache => {
-          return cache.addAll(urlsToCache)
-                      .then(() => {
-                          self.skipWaiting(); 
-                      })
+self.addEventListener('install', event => { 
+  event.waitUntil(caches.open(CACHE_NAME)
+  .then(cache => { 
+      return cache
+      .addAll(urlsToCache)
+      .then(() => { 
+          self.skipWaiting() 
       })
-      .catch(err => console.log('No se ha registrado el cache', err))
-);
-});
+  .catch(err => console.log('Hubo un error', err)) })); });
 
 self.addEventListener('activate', e => {
   const cacheWhitelist = [CACHE_NAME];
@@ -44,20 +40,18 @@ self.addEventListener('activate', e => {
 
   e.waitUntil(
       caches.keys()
-              .then(cacheNames => {
+          .then(cacheNames => {
               return Promise.all(
-                  cacheNames.map(cacheName =>{
-                      if(cacheWhitelist.indexOf(cacheName)== -1)
-                      {
-
-                          return cache.delete(cacheName);
+                  cacheNames.map(cacheNames => {
+                      if (cacheWhitelist.indexOf(cacheNames) == -1) {
+                          return cache.delete(cacheNames);
                       }
                   })
               );
-             })
-             .then(()=> {
-              self.clients.claim(); 
-             })
+          })
+          .then(() => {
+              self.clients.claim();
+          })
   );
 
 });
@@ -65,11 +59,11 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   e.respondWith(
       caches.match(e.request)
-              .then (res => {
-                  if(res){
-                      return res;
-                  }
-                  return fetch(e.request); 
-              })
+          .then(res => {
+              if (res) {
+                  return res;
+              }
+              return fetch(e.request);
+          })
   );
 });
