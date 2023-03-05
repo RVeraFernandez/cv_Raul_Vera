@@ -24,8 +24,8 @@ var urlsToCache = [
     "./img/1024.png",
 ];
 
-self.addEventListener("install", (e) => {
-    e.waitUntil(
+self.addEventListener("install", (event) => {
+    event.waitUntil(
       caches.open(CACHE_NAME)
         .then((cache) => {
           return cache.addAll(urlsToCache).then(() => {
@@ -36,34 +36,33 @@ self.addEventListener("install", (e) => {
     );
 });
 
-self.addEventListener("activate", (e) => {
+self.addEventListener("activate", (event) => {
     const cacheWhiteList = [CACHE_NAME];
-    e.waitUntil(
+    event.waitUntil(
       caches.keys()
         .then((cacheNames) => {
           return Promise.all(
             cacheNames.map((cacheNames) => {
               if (cacheWhiteList.indexOf(cacheNames) == -1) {
-                //Borrar los elementos que no se necesiten
                 return cache.delete(cacheNames);
               }
             })
           );
         })
         .then(() => {
-          self.clients.claim(); //activa la cache en el dispositivo
+          self.clients.claim();
         })
     );
   });
 
-  self.addEventListener("fetch", (e) => {
+  self.addEventListener("fetch", (event) => {
     e.respondWith(
-      caches.match(e.request)
+      caches.match(event.request)
       .then(res => {
         if (res) {
           return res;
         }
-        return fetch(e.request); //hago petición al servidor en caso de que no este en cache
+        return fetch(event.request);
       })
     );
   });
