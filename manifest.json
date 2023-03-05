@@ -1,9 +1,9 @@
 {
     "short_name": "DogeCoin",
     "name": "DogeCoinJS Web Aplication",
-    "start_url": "index.html",
+    "start_url": "index.html?utm_source=web_app_manifest",
     "background_color": "#f9d627",
-    "scope": "/",
+    "scope": "./",
     "theme_color": "#f9d627",
     "description": "Imagen de Doge <3",
     "lang":"es-Mx",

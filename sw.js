@@ -2,9 +2,9 @@ const CACHE_NAME = "v1_cache1_RFVF_PWA";
 
 var urlsToCache = [
     "/",
-    "index.html",
+    "./index.html",
     "css/styles.css",
-    "js/main.js",
+    "./js/main.js",
     "img/Square44x44Logo.targetsize-32.png",
     "img/Square44x44Logo.targetsize-48.png",
     "img/Square44x44Logo.targetsize-64.png",
