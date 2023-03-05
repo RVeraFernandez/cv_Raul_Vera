@@ -24,44 +24,48 @@ var urlsToCache = [
     "./img/1024.png",
 ];
 
-self.addEventListener('install', (event) =>{
-    event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(urlsToCache).then(()=>{
-                self.skipWaiting();
-            });
-        }).catch(err=>console.log('No se ha registrado el cache',err))
+self.addEventListener("install", (e) => {
+    e.waitUntil(
+      caches.open(CACHE_NAME)
+        .then((cache) => {
+          return cache.addAll(urlsToCache).then(() => {
+            self.skipWaiting();
+          });
+        })
+        .catch((err) => console.log("No se ha registrado el cache"), err)
     );
 });
 
-self.addEventListener('activate',(event) => {
-    const cacheWhitelist = [CACHE_NAME];
-    event.waitUntil(
-        caches.keys().then((cacheNames)=>{
-            return Promise.all(
-                cacheNames.map(cacheNames => {
-                    if(cacheWhitelist.indexOf(cacheNames)== -1){
-                        return cache.delete(cacheNames);
-                    }
-                })
-            );
+self.addEventListener("activate", (e) => {
+    const cacheWhiteList = [CACHE_NAME];
+    e.waitUntil(
+      caches.keys()
+        .then((cacheNames) => {
+          return Promise.all(
+            cacheNames.map((cacheNames) => {
+              if (cacheWhiteList.indexOf(cacheNames) == -1) {
+                //Borrar los elementos que no se necesiten
+                return cache.delete(cacheNames);
+              }
+            })
+          );
         })
-        .then(()=> {
-            self.clients.claim();
+        .then(() => {
+          self.clients.claim(); //activa la cache en el dispositivo
         })
     );
-});
+  });
 
-self.addEventListener('fetch', (event) => {
-    event.respondWith(
-        caches.match(event.request)
-        .then((response)=> {
-            if(response){
-                return response
-            }
-            return fetch(event.request);
-        })
+  self.addEventListener("fetch", (e) => {
+    e.respondWith(
+      caches.match(e.request)
+      .then(res => {
+        if (res) {
+          return res;
+        }
+        return fetch(e.request); //hago petición al servidor en caso de que no este en cache
+      })
     );
-});
+  });
 
 
