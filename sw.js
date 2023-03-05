@@ -24,47 +24,40 @@ var urlsToCache = [
     "./img/1024.png",
 ];
 
-self.addEventListener("install", (event) => {
-    event.waitUntil(
-      caches.open(CACHE_NAME)
-        .then((cache) => {
-          return cache.addAll(urlsToCache).then(() => {
-            self.skipWaiting();
-          });
-        })
-        .catch((err) => console.log("No se ha registrado el cache"), err)
-    );
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('mi-cache').then(cache => {
+      return cache.addAll(urlsToCache)
+        .then(() => { self.skipWaiting() })
+        .catch(err => console.log('Hubo un error', err))
+    })
+  );
 });
 
-self.addEventListener("activate", (event) => {
-    const cacheWhiteList = [CACHE_NAME];
-    event.waitUntil(
-      caches.keys()
-        .then((cacheNames) => {
-          return Promise.all(
-            cacheNames.map((cacheNames) => {
-              if (cacheWhiteList.indexOf(cacheNames) == -1) {
-                return cache.delete(cacheNames);
-              }
-            })
-          );
-        })
-        .then(() => {
-          self.clients.claim();
-        })
-    );
-  });
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});
 
-  self.addEventListener("fetch", (event) => {
-    event.respondWith(
-      caches.match(event.request)
-      .then(res => {
-        if (res) {
-          return res;
-        }
-        return fetch(event.request);
+self.addEventListener('activate', event => {
+  const cacheWhiteList = [CACHE_NAME];
+
+  event.waitUntil(
+    caches.keys()
+      .then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            if (cacheWhiteList.indexOf(cacheName) == -1) {
+              return cache.delete(cacheName);
+            }
+          })
+        )
       })
-    );
-  });
-
-
+      .then(() => {
+        self.clients.claim(); // active el cache
+      })
+  )
+})
