@@ -25,17 +25,17 @@ var urlsToCache = [
     "./favicon.ico",
 ];
 
-self.addEventListener('install', e=>{
+self.addEventListener('install', e => {
 
   e.waitUntil(
       caches.open(CACHE_NAME)
       .then(cache => {
           return cache.addAll(urlsToCache)
-                      .then(() =>{
+                      .then(() => {
                           self.skipWaiting(); 
                       })
       })
-      .catch(err=>console.log('No se ha registrado el cache', err))
+      .catch(err => console.log('No se ha registrado el cache', err))
 );
 });
 
@@ -45,7 +45,7 @@ self.addEventListener('activate',e => {
 
   e.waitUntil(
       caches.keys()
-              .then(cacheNames=>{
+              .then(cacheNames => {
               return Promise.all(
                   cacheNames.map(cacheName =>{
                       if(cacheWhitelist.indexOf(cacheName)== -1)
