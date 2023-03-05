@@ -38,7 +38,7 @@ self.addEventListener('install', e => {
 );
 });
 
-self.addEventListener('activate',e => {
+self.addEventListener('activate', e => {
   const cacheWhitelist = [CACHE_NAME];
 
 
@@ -62,7 +62,7 @@ self.addEventListener('activate',e => {
 
 });
 
-self.addEventListener('fetch',e => {
+self.addEventListener('fetch', e => {
   e.respondWith(
       caches.match(e.request)
               .then (res => {
