@@ -22,7 +22,6 @@ var urlsToCache = [
     "./img/256.png",
     "./img/512.png",
     "./img/1024.png",
-    "./favicon.ico",
 ];
 
 self.addEventListener('install', e => {

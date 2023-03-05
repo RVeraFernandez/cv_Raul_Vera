@@ -75,10 +75,6 @@
           {
             "src": "./img/1024.png",
             "sizes": "1024x1024"
-          },
-          {
-            "src":"favicon.ico",
-            "sizes":"1024x1024"
           }
     ]
     
