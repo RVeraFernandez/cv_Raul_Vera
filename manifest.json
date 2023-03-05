@@ -4,6 +4,7 @@
     "start_url": "index.html?utm_source=web_app_manifest",
     "background_color": "#f9d627",
     "scope": "./",
+    "display": "standalone",
     "theme_color": "#f9d627",
     "description": "Imagen de Doge <3",
     "lang":"es-Mx",
