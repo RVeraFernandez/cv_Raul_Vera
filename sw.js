@@ -56,7 +56,7 @@ self.addEventListener("activate", (event) => {
   });
 
   self.addEventListener("fetch", (event) => {
-    e.respondWith(
+    event.respondWith(
       caches.match(event.request)
       .then(res => {
         if (res) {
