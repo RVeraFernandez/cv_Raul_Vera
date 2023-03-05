@@ -24,40 +24,50 @@ var urlsToCache = [
     "./img/1024.png",
 ];
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open('mi-cache').then(cache => {
-      return cache.addAll(urlsToCache)
-        .then(() => { self.skipWaiting() })
-        .catch(err => console.log('Hubo un error', err))
-    })
+self.addEventListener("install", (e) => {
+  e.waitUntil(
+    caches
+      .open(CACHE_NAMES)
+      .then((cache) => {
+        return cache.addAll(urlsToCache).then(() => {
+          self.skipWaiting();
+        });
+      })
+      .catch((err) => console.log("No se ha registrado el cache"), err)
   );
 });
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
-  );
-});
+//Event activate
+self.addEventListener("activate", (e) => {
+  const cacheWhiteList = [CACHE_NAMES];
 
-self.addEventListener('activate', event => {
-  const cacheWhiteList = [CACHE_NAME];
-
-  event.waitUntil(
+  e.waitUntil(
     caches.keys()
-      .then(cacheNames => {
+      .then((cacheNames) => {
         return Promise.all(
-          cacheNames.map(cacheName => {
-            if (cacheWhiteList.indexOf(cacheName) == -1) {
-              return cache.delete(cacheName);
+          cacheNames.map((cacheNames) => {
+            if (cacheWhiteList.indexOf(cacheNames) == -1) {
+              return cache.delete(cacheNames);
             }
           })
-        )
+        );
       })
       .then(() => {
-        self.clients.claim(); // active el cache
+        self.clients.claim();
       })
-  )
-})
+  );
+});
+
+
+//Event fetch
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    caches.match(e.request)
+    .then(res => {
+      if (res) {
+        return res;
+      }
+      return fetch(e.request);
+    })
+  );
+});
