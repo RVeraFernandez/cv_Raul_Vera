@@ -4,7 +4,7 @@ var urlsToCache = [
     "./",
     "./index.html",
     "./css/styles.css",
-    "./js/main.js",
+    "./main.js",
     "./img/Square44x44Logo.targetsize-32.png",
     "./img/Square44x44Logo.targetsize-48.png",
     "./img/Square44x44Logo.targetsize-64.png",
