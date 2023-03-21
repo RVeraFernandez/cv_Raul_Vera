@@ -15,8 +15,8 @@
     margin-right: 10%;
 }
 
-.tarjetainfoger{
-    align-items: center;
+.tarjetainfoger .center{
+    text-align: center;
 }
 
 .parrafoinfoge{
