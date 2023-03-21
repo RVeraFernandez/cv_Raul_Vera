@@ -1,16 +1,4 @@
-.cba-header{
-    text-align: center;
-}
-
-.cba-header_title{
-    color: black;
-}
-
-.doge{
-    height: 550px;
-}
-
-.infogeneral{
+.infogeneral {
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -22,4 +10,9 @@
 
 .parrafoinfoge{
     text-align: center;
+}
+
+
+.carouselfa {
+    font-style: black;
 }
