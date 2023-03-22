@@ -1,6 +1,8 @@
 .infogeneral {
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .tarjetainfoger {
@@ -12,7 +14,27 @@
     text-align: center;
 }
 
+.formacademica{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 
 .carouselfa {
     background-color: black;
+}
+
+.exprofesional{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.datosinteres{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
