@@ -76,6 +76,18 @@
           {
             "src": "./img/1024.png",
             "sizes": "1024x1024"
+          },
+          {
+            "src": "./img/mecatronica.jpg",
+            "sizes": "744x400"
+          },
+          {
+            "src": "./img/desarrollosoftware.jpg",
+            "sizes": "1200x627"
+          },
+          {
+            "src": "./img/gestionsoftware.jpg",
+            "sizes": "1312x800"
           }
     ]
     

@@ -1,8 +1,8 @@
 .infogeneral {
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .tarjetainfoger {
@@ -17,19 +17,20 @@
 .formacademica{
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .carouselfa {
+    max-height: 1000px;
     background-color: black;
 }
 
 .exprofesional{
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .datosinteres{

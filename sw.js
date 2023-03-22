@@ -22,6 +22,9 @@ var urlsToCache = [
     "./img/256.png",
     "./img/512.png",
     "./img/1024.png",
+    "./img/mecatronica.jpg",
+    "./img/desarrollosoftware.jpg",
+    "./img/gestionsoftware.jpg",
 ];
 
 self.addEventListener('install', event => { 
