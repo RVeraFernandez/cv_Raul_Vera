@@ -36,6 +36,21 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3) , rgba(255, 255, 255, 0))
 }
 
+.botones_fa{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.botones_fa td {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.botones_fa img {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
 .exprofesional{
     margin-left: 10%;
     margin-right: 10%;
