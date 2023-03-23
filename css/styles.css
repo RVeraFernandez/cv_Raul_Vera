@@ -10,11 +10,11 @@
     margin: 0 auto;
 }
 
-.parrafoinfoge{
+.parrafoinfoge {
     text-align: center;
 }
 
-.formacademica{
+.formacademica {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
@@ -24,19 +24,19 @@
 .carouselfa {
     position: relative;
     max-height: 1000px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.carousel-inner img{
-    max-height: 500px;
+.carousel-inner img {
+    max-height: 450px;
 }
 
-.textocarousel{
+.textocarousel {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3) , rgba(255, 255, 255, 0))
 }
 
-.botones_fa{
+.botones_fa {
     margin: 0 auto;
     text-align: center;
 }
@@ -51,30 +51,30 @@
     margin-bottom: 2%;
 }
 
-.exprofesional{
+.exprofesional {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
-.tabla-empleos{
+.tabla-empleos {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.datosinteres{
+.datosinteres {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.items_di{
+.items_di {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.texto_di{
+.texto_di {
     text-align: justify;
 }
