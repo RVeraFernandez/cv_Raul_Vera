@@ -1,4 +1,4 @@
-.infogeneral {
+#infogeneral {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-.formacademica {
+#formacademica {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
@@ -51,7 +51,7 @@
     margin-bottom: 2%;
 }
 
-.exprofesional {
+#exprofesional {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
@@ -63,7 +63,7 @@
     margin-right: 5%;
 }
 
-.datosinteres {
+#datosinteres {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
@@ -79,11 +79,11 @@
     text-align: justify;
 }
 
-.final {
+#footer {
     background-color: gray;
 }
 
-.final div {
+#footer div {
     padding-top: 1%;
     padding-bottom: 1%;
     text-align: center;
