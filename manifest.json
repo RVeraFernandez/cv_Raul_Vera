@@ -1,12 +1,12 @@
 {
-    "short_name": "DogeCoin",
-    "name": "DogeCoinJS Web Aplication",
+    "short_name": "CV Raúl Vera",
+    "name": "Curriculum Vitae Raúl Vera",
     "start_url": "index.html?utm_source=web_app_manifest",
-    "background_color": "#f9d627",
+    "background_color": "#7E08DF",
     "scope": "./",
     "display": "standalone",
-    "theme_color": "#f9d627",
-    "description": "Imagen de Doge <3",
+    "theme_color": "#7E08DF",
+    "description": "Curriculum Vitae de Raúl Fernando Vera Fernández",
     "lang":"es-Mx",
     "icons": [          
           {

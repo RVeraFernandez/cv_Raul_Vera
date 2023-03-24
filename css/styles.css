@@ -14,13 +14,8 @@ body h4 {
 }
 
 .tarjetainfoger {
-    width: fit-content;
     margin: 0 auto;
     box-shadow: 5px 5px 10px;
-}
-
-.tarjetainfoger img {
-    margin: 0 auto;
 }
 
 .parrafoinfoge {
