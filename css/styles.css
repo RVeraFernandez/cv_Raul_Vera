@@ -13,6 +13,22 @@ body h4 {
     margin-bottom: 2%;
 }
 
+.tarjeta_ig_pg {
+    height: 300px;
+}
+
+.container1 {
+    height: 100%;
+    width: 20%;
+    background-color: red;
+}
+
+.container2 {
+    height: 100%;
+    width: 80%;
+    background-color: blueviolet;
+}
+
 .tarjetainfoger {
     margin: 0 auto;
     box-shadow: 5px 5px 10px;
