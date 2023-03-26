@@ -14,19 +14,42 @@ body h4 {
 }
 
 .tarjeta_ig_pg {
-    height: 300px;
+    margin: 0 auto;
+    height: 250px;
+    width: max-content;
+    box-shadow: 5px 5px 10px;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .container1 {
     height: 100%;
-    width: 20%;
-    background-color: red;
+    width: 213px;
+    border-radius: 10px 0px 0px 10px;
+    background-image: url(../img/fotopersonal.jpeg);
+    background-size: contain;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .container2 {
     height: 100%;
-    width: 80%;
-    background-color: blueviolet;
+    width: max-content;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textot {
+    margin: 2%;
 }
 
 .tarjetainfoger {
