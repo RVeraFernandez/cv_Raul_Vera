@@ -1,5 +1,8 @@
 body{
-    background: linear-gradient(to right, rgba(126, 8, 223, 0.5), rgba(255, 255, 255, 0), rgba(126, 8, 223, 0.5))
+    background: linear-gradient(to right, 
+    rgba(126, 8, 223, 0.5), 
+    rgba(255, 255, 255, 0), 
+    rgba(126, 8, 223, 0.5))
 }
 
 body h4 {
